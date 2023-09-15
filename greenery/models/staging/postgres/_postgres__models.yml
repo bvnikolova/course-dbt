@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_users.sql 
+    description: Customer info such as name, email, address id
+  - name: stg_addresses.sql 
+    description: Customer addresses
+  - name: stg_products.sql
+    description: Product info such as name, price and enventory     
+  - name: stg_promos.sql
+    description: Promos info such as id, discount and status   
+  - name: stg_orders.sql 
+    description: Purchase orders info such as id, customer details, order details 
+  - name: stg_order_items.sql 
+    description: Per order the items and the quantity
+  - name: stg_events.sql
+    description: Order log events
