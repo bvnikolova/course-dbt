@@ -69,24 +69,11 @@ ORDER BY
 
 
 5. On average, how many unique sessions do we have per hour?
-Answer: We have 61.258 unique sessions per hour on average
+Answer: We have 16.327 unique sessions per hour on average
 
 SQL:
-select 
-DATE_PART(YEAR, created_at) as Year,
-DATE_PART(MONTH, created_at) as Month, 
-DATE_PART(DAY, created_at) as Day,   
-DATE_PART(HOUR, created_at) as Hour,
-count(distinct session_id) as unique_sessions_per_hour,
-AVG(COUNT(*)) OVER () AS average_sessions_per_hour
-from stg_events
-group by 
-DATE_PART(YEAR, created_at),
-DATE_PART(MONTH, created_at), 
-DATE_PART(DAY, created_at) ,   
-DATE_PART(HOUR, created_at)
-order by 
-DATE_PART(YEAR, created_at),
-DATE_PART(MONTH, created_at), 
-DATE_PART(DAY, created_at) ,   
-DATE_PART(HOUR, created_at)
+
+with sessions_per_hour as (select date_trunc('hour',created_at) session_hour, 
+count(distinct session_id) sessions from stg_events group by 1 )
+
+select avg(sessions) as avg_sessions from sessions_per_hour

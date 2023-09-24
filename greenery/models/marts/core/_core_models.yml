@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_products
+    columns:
+    - name: product_id
+      description: Product info such as name, price and enventory
+      tests:
+        - unique
+        - not_null
+
+  - name: dim_users
+    columns:
+      - name: user_id
+        description: Customer info such as name, email, address id
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_orders
+    columns:
+      - name: order_id
+        description: Purchase orders info such as id, customer details, order details 
+        tests:
+          - unique
+          - not_null
