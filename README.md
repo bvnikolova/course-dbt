@@ -27,3 +27,11 @@ from user_orders_count
 Added two intermediate models for daily page views and daily orders by product and grouped by year, month, and day. Added one fact page view model using the 2 intermediate models to provide detailed info on the product performance.
 
 Part 2: Tests added for uniqueness and not null values on key data. No bad data was found.
+
+Part 3: 
+Which products had their inventory change from week 1 to week 2? 4 products with DBT_VALID_TO 2023-09-23 21:34:41.981
+
+Pothos
+Philodendron
+Monstera
+String of pearls
