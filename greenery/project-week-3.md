@@ -1,5 +1,5 @@
 What is our overall conversion rate? 62.4%
-Conversion rate is defined as the # of unique sessions with a purchase event / total number of unique sessions. 
+ 
 
 SQL:
 select 
@@ -8,7 +8,7 @@ from fact_product_events
 
 
 What is our conversion rate by product?
-Conversion rate by product is defined as the # of unique sessions with a purchase event of that product / total number of unique sessions that viewed that product
+
 
 SQL:
 select 
