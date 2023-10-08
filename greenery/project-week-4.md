@@ -4,9 +4,9 @@ Which products had their inventory change from week 3 to week 4?
 - Pothos, Philodendron, Bamboo,ZZ Plant, Monstera,String of pearls
  
  SQL:
-     select * from product_snapshot
-     where date_trunc (week, dbt_valid_to) = date_trunc (week, current_date)
-     order by product_id, dbt_updated_at
+select * from product_snapshot
+where date_trunc (week, dbt_valid_to) = date_trunc (week, current_date)
+order by product_id, dbt_updated_at
 
  Can you use the inventory changes to determine which products had the most fluctuations in inventory?
  Did we have any items go out of stock in the last 3 weeks? 
