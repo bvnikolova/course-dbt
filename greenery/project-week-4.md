@@ -24,9 +24,6 @@ Which products had their inventory change from week 3 to week 4?
 
 Part 2. Modeling challenge
 
-How are our users moving through the product funnel?
-Which steps in the funnel have largest drop off points?
-
 SQL:
 
 select 
@@ -42,4 +39,5 @@ order by p.name
 
 Part 3: Reflection questions
 If your organization is using dbt, what are 1-2 things you might do differently / recommend to your organization based on learning from this course?
-I would 
+
+- I would recommend adding exposures
